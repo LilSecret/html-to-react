@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  font-family: serif;
 }
 ol,
 ul {
@@ -121,9 +122,12 @@ blockquote:after,
 q:before,
 q:after {
   content: "";
-  content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+#root {
+  width: 100%;
 }

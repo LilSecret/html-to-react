@@ -29,13 +29,13 @@ _You can copy and paste these checklists into your new repository and fill them 
 
 ### Standard Requirements
 
-- [ ] Setup eslint
-- [ ] Pass all linting checks
-- [ ] Format code with prettier
-- [ ] State should not be duplicated
-- [ ] Variables should be named logicially
-- [ ] No unneccessary console logs
-- [ ] No commented out blocks of code (Code comments are fine)
+- [x] Setup eslint
+- [x] Pass all linting checks
+- [x] Format code with prettier
+- [x] State should not be duplicated
+- [x] Variables should be named logicially
+- [x] No unneccessary console logs
+- [x] No commented out blocks of code (Code comments are fine)
 - [ ] Setup a github repository with your submission as the `main` branch, you will submit a link to this for grading (Not a Zip File)
 
 ### Assignment Specific Requirements
