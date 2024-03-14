@@ -1,31 +1,6 @@
-const ratings = [
-  {
-    name: "Hawkeye",
-    skillSet: "Sniper, Loyal AF",
-    votes: 95,
-  },
-  {
-    name: 'Edward Elrich "Full Metal Alchemist"',
-    skillSet: "Alchemy, Human Transmutation",
-    votes: 100,
-  },
-  {
-    name: "Nina",
-    skillSet: "Loving Dogs, being adorable",
-    votes: 93,
-  },
-  {
-    name: "Mj. Armstrong",
-    skillSet: "Alchemy, Muscles",
-    votes: 94,
-  },
-  {
-    name: "Alfonse Elrich",
-    skillSet: "Being Loveable, Alchemy",
-    votes: 110,
-  },
-];
+import data from "./data";
 
+const { ratings } = data;
 const topRatings = ratings.sort((a, b) => b.votes - a.votes);
 
 function RatingRow(props) {
