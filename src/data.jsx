@@ -24,6 +24,11 @@ const ratings = [
     skillSet: "Being Loveable, Alchemy",
     votes: 110,
   },
+  {
+    name: "Bone Appetit",
+    skillSet: "Being So Delicious",
+    votes: 99,
+  },
 ];
 
 const cards = [

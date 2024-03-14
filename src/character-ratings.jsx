@@ -1,7 +1,8 @@
 import data from "./data";
 
 const { ratings } = data;
-const topRatings = ratings.sort((a, b) => b.votes - a.votes);
+const sortedRatings = ratings.sort((a, b) => b.votes - a.votes);
+const firstFive = sortedRatings.slice(0, 5);
 
 function RatingRow(props) {
   const newIndex = props.index + 1;
@@ -26,7 +27,7 @@ function CharacterRatings() {
           <th>Skill Set</th>
           <th>Votes</th>
         </tr>
-        {topRatings.map((rating, index) => {
+        {firstFive.map((rating, index) => {
           return <RatingRow data={rating} index={index} key={rating.name} />;
         })}
       </table>
