@@ -1,32 +1,27 @@
 import { Component } from "react";
-import data from "./data";
-
-const { cards } = data;
 
 class CharacterCard extends Component {
   render() {
-    const { name, nickname, image, description } = this.props.data;
+    const { name, nickName, imageUrl, background } = this.props.data;
     return (
       <div className="card" key={name}>
         <div className="card-titles">
           <h3>{name}</h3>
-          {nickname ? <h4>{nickname}</h4> : ""}
+          {nickName ? <h4>{nickName}</h4> : ""}
         </div>
-        <img src={image} alt="character image" />
-        <p>{description}</p>
+        <img src={imageUrl} alt="character image" />
+        <p>{background}</p>
       </div>
     );
   }
 }
 
-function CharacterCards() {
+export default function CharacterCards({ characters }) {
   return (
     <section id="character-cards">
-      {cards.map((card) => {
-        return <CharacterCard data={card} key={card.name} />;
+      {characters.map((character) => {
+        return <CharacterCard data={character} key={character.name} />;
       })}
     </section>
   );
 }
-
-export default CharacterCards;

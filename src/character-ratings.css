@@ -2,7 +2,6 @@
   width: 90%;
   min-height: 33vh;
   background-color: white;
-  color: black;
   border-radius: 5px;
   margin-top: 20px;
   margin-inline: auto;
@@ -29,7 +28,6 @@ td,
 th {
   border: 1px solid #aaaaaa;
   text-align: left;
-  color: black;
   padding: 8px;
 }
 
