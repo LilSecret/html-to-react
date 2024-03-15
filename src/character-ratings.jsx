@@ -11,9 +11,13 @@ function RatingRow({ data, index }) {
   );
 }
 
+const getTopFiveVotes = (characters) => {
+  const sortedVotes = characters.sort((a, b) => b.votes - a.votes);
+  return sortedVotes.slice(0, 5);
+};
+
 export default function CharacterRatings({ characters }) {
-  const sortedRatings = characters.sort((a, b) => b.votes - a.votes);
-  const topFive = sortedRatings.slice(0, 5);
+  const topFive = getTopFiveVotes(characters);
 
   return (
     <section id="character-ratings">
