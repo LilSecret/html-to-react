@@ -1,20 +1,20 @@
-// const sortedRatings = ratings.sort((a, b) => b.votes - a.votes);
-// const firstFive = sortedRatings.slice(0, 5);
+function RatingRow({ data, index }) {
+  const { name, skillset, votes } = data;
+  const surfaceClass = index % 2 == 0 ? "dark" : "light";
 
-// function RatingRow(props) {
-//   const newIndex = props.index + 1;
-//   const { name, skillSet, votes } = props.data;
-//   const surfaceClass = newIndex % 2 == 0 ? "light" : "dark";
-//   return (
-//     <tr className={surfaceClass}>
-//       <td>{name}</td>
-//       <td>{skillSet}</td>
-//       <td>{votes}</td>
-//     </tr>
-//   );
-// }
+  return (
+    <tr className={surfaceClass}>
+      <td>{name}</td>
+      <td>{skillset}</td>
+      <td>{votes}</td>
+    </tr>
+  );
+}
 
-export default function CharacterRatings(props) {
+export default function CharacterRatings({ characters }) {
+  const sortedRatings = characters.sort((a, b) => b.votes - a.votes);
+  const topFive = sortedRatings.slice(0, 5);
+
   return (
     <section id="character-ratings">
       <h4>Top Characters</h4>
@@ -24,9 +24,11 @@ export default function CharacterRatings(props) {
           <th>Skill Set</th>
           <th>Votes</th>
         </tr>
-        {/* {firstFive.map((rating, index) => {
-          return <RatingRow data={rating} index={index} key={rating.name} />;
-        })} */}
+        {topFive.map((character, index) => {
+          return (
+            <RatingRow data={character} index={index} key={character.name} />
+          );
+        })}
       </table>
     </section>
   );
